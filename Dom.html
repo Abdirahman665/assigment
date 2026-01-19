@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <u id="tu">
+        Abdirahman
+    </u>
+
+    <div class="df">
+        <h1 id="text">siidow</h1>
+        <p id="123">my name Abdirahman</p>
+        <p>my name Abdirahman</p>
+    </div>    
+
+
+    <p id="tx">my name Abdirahman</p>
+
+    <input type="text">
+    fast name
+    <input type="id">
+    second name
+    <input type="value">
+    last name
+
+    <h1 id="ca"></h1>
+
+    <ul class="topic">
+        <li id="input">123</li>
+        <li id="txt">456</li>
+    </ul>
+
+
+    <script>
+        let text = document.getElementById("text");
+console.log(text);
+
+text.style.background="cyan"
+console.log(h1)
+
+
+//traversing through elements
+ let div = document.getElementsByClassName("df");
+ console.log(div.lastElementChild);
+
+let u = document.getElementById("tu")
+console.log(u)
+
+
+ //accessing children to the parent  Node
+ let tx = document.getElementById("tx");
+ console.log(tx.parentNode);
+
+
+ //prevoius sibling
+ console.log(tx.previousElementSibling);
+
+
+//next sibling
+ console.log(tx.nextElementSibling);
+
+  //to access HTML element content
+let txt = document.getElementById("tx").innerHTML;
+console.log(txt);
+
+
+//or
+console.log(tx.innerText);
+
+
+//text content displays all contents in the HTML tag
+let par = document.querySelector(".text");
+console.log(par.textContent);
+
+
+//while inner text displays only visible text in the web page
+console.log(par.innerText);
+
+//changing HTML content
+let change = document.getElementById("ca");
+change.innerHTML = "<h1> welcome to our class CA242</h1>";
+
+
+  //checking if attribute exists or not
+  console.log(inputbox.hasAttribute("text"));
+
+
+//Create an element method
+let newel = document.createElement("div");
+
+
+//add paragraph inside the element
+newel.innerHTML = "<p> this the new element content</p>"
+
+
+//make visible to the web page
+document.body.appendChild(newel)
+
+
+//modify the property of the element using style
+newel.style.color = "green"
+
+
+//display in the console
+console.log(newel);
+
+
+  //select the element
+let menu = document.querySelector(".menue");
+
+
+//create new element
+let list = document.createElement("li");
+
+
+//new element value
+list.innerHTML= "<li>Calculas</li>"
+
+
+//add the new element in the previous list
+menu.appendChild(list)
+
+//another option you can use InsertAdjacenElement method with four different position
+menu.insertAdjacentElement("afterbegin",list)
+
+
+  //how to remove an element
+let re = document.getElementById("txt").remove();
+
+
+//another option
+re.remove();
+
+//selecting an element
+let oldpara = document.getElementById("txt");
+
+
+//create the new element
+let newpara = document.createElement("p");
+
+
+//create a content to the new paragraph
+newpara.innerHTML= "THis is the new text";
+
+
+//repalacing the element using replace method
+//document.body.replaceChild(newpara,oldpara)
+    //another option if child element has parent do this
+oldpara.parentNode.replaceChild(newpara,oldpara)
+    </script>
+    
+
+
+ 
+
+</body>
+</html>
